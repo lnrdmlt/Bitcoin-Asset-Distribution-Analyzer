@@ -1,7 +1,7 @@
 import csv
 
 def sort():
-    with open("addresses.csv", mode="r") as csv_file:
+    with open("data/addresses.csv", mode="r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         return sorted(csv_reader, key=lambda row:int(row["value_satoshi"]) , reverse=True)   
     
